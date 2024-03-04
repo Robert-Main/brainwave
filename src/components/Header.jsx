@@ -1,11 +1,12 @@
 import { useLocation } from "react-router-dom";
-// import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 import { useState } from "react";
 import { brainwave } from "../assets";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { navigation } from "../constants";
 import Button from "./Button";
+import { HambugerMenu } from "./design/Header";
 
 const Header = () => {
   const pathname = useLocation();
@@ -14,17 +15,17 @@ const Header = () => {
   const toggleNavigation = () => {
     if (openNavigation) {
       setOpenNavigation(false);
-      //   enablePageScroll();
+      enablePageScroll();
     } else {
       setOpenNavigation(true);
-      //   disablePageScroll();
+      disablePageScroll();
     }
   };
 
   const handleClick = () => {
     if (!openNavigation) return;
 
-    // enablePageScroll();
+    enablePageScroll();
     setOpenNavigation(false);
   };
 
@@ -63,7 +64,7 @@ const Header = () => {
             ))}
           </div>
 
-          {/* <HamburgerMenu />/\ */}
+          <HambugerMenu />
         </nav>
 
         <a

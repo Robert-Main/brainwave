@@ -28,6 +28,7 @@ const Pricing = () => {
         </div>
 
         <Heading
+          className="text-center"
           tag="Get started with Brainwave"
           title="Pay once, use forever"
         />
@@ -40,7 +41,7 @@ const Pricing = () => {
 
         <div className="flex justify-center mt-10">
           <a
-            className="text-xs font-bold tracking-wider uppercase border-b font-code"
+            className="text-xs font-bold tracking-wider uppercase border-b cursor-pointer font-code"
             href="/pricing"
           >
             See the full details
